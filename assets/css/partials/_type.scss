@@ -1,0 +1,106 @@
+* {
+	font-family: $fontFamily;
+	line-height: $fontHeight;
+
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// universal
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+
+body {
+	color: $fontColor;
+	font:{
+		family: $fontFamily;
+		size: 18px;
+		weight: normal;
+	}
+	line-height: $fontHeight;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+	color: $headingColor;
+	font:{
+		family: $headingFontFamily;
+		weight: normal;
+	}
+	margin-bottom: 1em;
+}
+
+h4, h5, h6 {
+	color: $headingColor;
+	font:{
+		family: $fontFamily;
+		weight: normal;
+	}
+	margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 4.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.375em;
+}
+
+h4 {
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.875em;
+}
+
+.font-regular, .font-light {
+  font-weight: $fontWeight;
+}
+
+.font-heavy {
+  font-weight: $fontWeightBold;
+}
+
+a {
+	color: $linkColor;
+	text-decoration: none;
+}
+
+hr {
+	
+}
+
+ul {
+	border-left: 3px solid rgba(0,0,0,0.1);
+	list-style-type: none;
+	margin: 0.5em 0 2em;
+	padding: 0 0 0 1em;
+
+	li {
+		font-size: 0.95em;
+		line-height: 1.5;
+		padding: 4px 0;
+	}
+}
