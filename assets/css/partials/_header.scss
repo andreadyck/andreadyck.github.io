@@ -1,0 +1,73 @@
+/* ---------------------- Header ---------------------- */
+header {
+	color: $white;
+	text-align: center;
+
+	h1, h2, h3, h4, a {
+		color: $white;
+		text-decoration: none;
+	}
+
+	h4 {
+		margin-top: 0;
+		opacity: 0.5;
+	}
+
+	// Top Left -------------------------------- //
+	.initial {
+		float: left;
+		font-family: $titleHeadingFontFamily;
+		font-size: 1.5em;
+		margin-left: 1em;
+
+		span {
+			font-family: $altFontFamily;
+			font-size: 2em;
+			padding-right: 0.2em;
+		}
+	}
+
+	// Top Right -------------------------------- //
+	.contactInfo {
+		text-align: right;
+
+		a {
+			display: block;
+			padding-bottom: 10px;
+		}
+	}
+	
+	// Heading -------------------------------- //
+	.pageTitle {
+		// position: fixed;
+		// top: 12em;
+		// left: 0;
+		clear: left;
+		float: left;
+		margin-top: 3em;
+		width: 100%;
+
+		h1 {
+			margin-bottom: 0;
+			position: relative;
+
+			&:before {
+				content: attr(data-bg-text);
+				font:{
+					family: $altFontFamily;
+					size: 4em;
+				}
+				margin: -225px 0 0 -241px;
+				opacity: 0.1;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+		}
+	}
+
+	// Homepage -------------------------------- //
+	&.homepageHeader .pageTitle h1 {
+		font-size: 4em;
+	}
+}

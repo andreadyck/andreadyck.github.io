@@ -3,21 +3,23 @@
 // Colors -------------------------------- //
 $purple: #8E2B81;
 $lavender: #B2B1CF;
+$green: #94bf94;
+$greyBlue: #76818D;
 
 $white: #fff;
-$grey: #a0a0a0;
+$grey: #717171;
 $lightGrey: #F8F8F8;
 $darkGrey: #333447;
 $black: #000;
 
 // Fonts -------------------------------- //
-$baskerville: 'Libre Baskerville', serif;
-$rufina: 'Rufina', serif;
-$nunito: 'Nunito', sans-serif;
+$baskerville: "Baskerville Old Face", serif;
 $befindisa: 'Befindisa', serif;
+$franklin: 'Libre Franklin', sans-serif;
 
-$headingFontFamily: $baskerville;
-$fontFamily: $nunito;
+$fontFamily: $franklin;
+$headingFontFamily: $franklin;
+$titleHeadingFontFamily: $baskerville;
 $altFontFamily: $befindisa;
 
 $headingColor: #000;
@@ -35,13 +37,8 @@ $backgroundColor: $lavender;
 $altBackgroundColor: $white;
 $altAltBackgroundColor: $lightGrey;
 
-.imagePreloader {
-	opacity: 0;
-	-ms-transition: all 1s linear;
-	-moz-transition: all 1s linear;
-	-webkit-transition: all 1s linear;
-	transition: all 1s linear;
-}
+$shoppyBg: $green;
+$courtenayBaptistBg: $greyBlue;
 
 // Utility -------------------------------- //
 .altBg {
@@ -74,9 +71,26 @@ $altAltBackgroundColor: $lightGrey;
 	opacity: 1;
 }
 
+.clear {
+  &:before, &:after {
+    content: "";
+      display: table;
+  }
 
-/* ---------------------- Simple.io Grid ---------------------- */
-// Grid -------------------------------- //
+  &:after {
+    clear: both;
+  }
+}
+
+.imagePreloader {
+  opacity: 0;
+  -ms-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+// Simple.io Grid -------------------------------- //
 $width: 94%;
 $gutter: 6%;
 $breakpoint-small: 33.75em; // 540px
@@ -84,18 +98,8 @@ $breakpoint-med: 45em; // 720px
 $breakpoint-large: 60em; // 960px
 
 .container {
-  // width: 90%;
   margin-left: auto;
   margin-right: auto;
-
-  // @media only screen and (min-width: $breakpoint-small) {
-  //   width: 80%;
-  // }
-
-  // @media only screen and (min-width: $breakpoint-large) {
-  //   width: 75%;
-  //   max-width: 60rem;
-  // }
 }
 
 .row {

@@ -1,3 +1,4 @@
+/* ---------------------- Type ---------------------- */
 * {
 	font-family: $fontFamily;
 	line-height: $fontHeight;
@@ -8,7 +9,6 @@
 	box-sizing: border-box;
 }
 
-// universal
 html,
 body {
   height: 100%;
@@ -24,11 +24,15 @@ body {
 	color: $fontColor;
 	font:{
 		family: $fontFamily;
-		size: 18px;
+		size: 19px;
 		weight: normal;
 	}
 	line-height: $fontHeight;
 	-webkit-font-smoothing: antialiased;
+
+	@media screen and (max-width: 580px){
+		font-size: 95%;
+	}
 }
 
 h1, h2, h3 {
@@ -37,7 +41,7 @@ h1, h2, h3 {
 		family: $headingFontFamily;
 		weight: normal;
 	}
-	margin-bottom: 1em;
+	margin-bottom: 0.25em;
 }
 
 h4, h5, h6 {
@@ -46,23 +50,26 @@ h4, h5, h6 {
 		family: $fontFamily;
 		weight: normal;
 	}
-	margin-bottom: 0.5em;
+	margin-bottom: 0.25em;
 }
 
 h1 {
-  font-size: 4.5em;
+  font-size: 5.25em;
+  font-family: $titleHeadingFontFamily;
+  margin-bottom: 0.5em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.75em;
+  
 }
 
 h3 {
-  font-size: 1.375em;
+  font-size: 1.3em;
 }
 
 h4 {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -72,7 +79,9 @@ h5 {
 }
 
 h6 {
-  font-size: 0.875em;
+  font-size: 0.6em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .font-regular, .font-light {
@@ -84,8 +93,8 @@ h6 {
 }
 
 a {
-	color: $linkColor;
-	text-decoration: none;
+	color: $fontColor;
+	text-decoration: underline;
 }
 
 hr {

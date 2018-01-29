@@ -1,31 +1,81 @@
-// General -------------------------------------------- //
+/* ---------------------- Content ---------------------- */
 body {
 	background: $backgroundColor;
 }
 
-.outerBox {
-	border: 1px solid rgba(255,255,255,0.4);
-	// Check browser compatibility
-	height: calc(100vh - 6em);
-	margin: 3em;
-	padding: 1em;
-	position: fixed;
-	top: 0;
-	left: 0;
-	// Check browser compatibility
-	width: calc(100vw - 6em);
-	z-index: 0;
+.wrapper {
+	margin: 0 auto;
+	max-width: 95%;
+	width: 1500px;	
 }
 
-.outerWrapper {
-	// Check browser compatibility
-	height: calc(100vh - 3em);
-	margin: 3em 3em 0;
-	padding: 1em 1em 0;
+a.button {
+	border: 1px solid;
+	color: $black;
+	font-size: 0.8em;
+	padding: 0.75em 1.5em;
+	text-decoration: none;
+	text-transform: uppercase;
+	-ms-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+
+	&:hover, &:focus, &:active {
+		color: $white !important;
+	}
+}
+
+// Shoppy -------------------------------- //
+body.shoppy {
+	background: $shoppyBg;
 	position: relative;
-	// Check browser compatibility
+
+	&:after {
+		content: '';
+		background-image: url('../images/bg-shoppy.png');
+		display: block;
+		opacity: 0.4;
+		position: fixed;
+		top: 5%;
+	    left: 5%;
+	    height: 90%;
+	    width: 90%;
+	}
+
+	.pageContent a.button {
+		border-color: $green;
+
+		&:hover, &:focus, &:active {
+			background: $green;
+		}
+	}
+}
+
+// Spacing -------------------------------- //
+// .outerBox {
+// 	border: 1px solid rgba(255,255,255,0.4);
+// 	height: calc(100vh - 6em);
+// 	margin: 3em;
+// 	padding: 1em;
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	width: calc(100vw - 6em);
+// 	z-index: 0;
+// }
+
+.outerWrapper {
+	height: calc(100vh - 2em);
+	margin: 2em 3em 0;
+	padding: 0;
+	position: relative;
 	width: calc(100vw - 6em);
 	z-index: 1;
+
+	@media screen and (max-width: 700px) {
+		margin: 2em 1.5em 0;
+		width: calc(100vw - 3em);
+	}
 }
 
 .cornerStar {
@@ -33,7 +83,7 @@ body {
 	font-size: 1em;
 	position: fixed;
 	bottom: 1em;
-	left: 1.25em;
+	right: 1.25em;
 
 	i {
 		color: $white;
@@ -45,91 +95,38 @@ body {
 	}
 }
 
-// Header -------------------------------------------- //
-header {
-	color: $white;
-	text-align: center;
-
-	h1, h2, h3, h4, a {
-		color: $white;
-	}
-
-	.pageTitle {
-		position: fixed;
-		top: 12em;
-		left: 0;
-		width: 100%;
-
-		h1 {
-			margin-bottom: 0;
-			position: relative;
-
-			&:before {
-				content: attr(data-bg-text);
-				font-family: $altFontFamily;
-				font-size: 5.5em;
-				margin: -200px 0 0 -241px;
-				opacity: 0.1;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-			}
-		}
-
-		h4 {
-			opacity: 0.5;
-		}
-	}
-
-	&.homepageHeader .pageTitle h1 {
-		font-size: 3em;
-	}
-
-	.contactInfo {
-		text-align: right;
-
-		a {
-			display: block;
-			padding-bottom: 10px;
-		}
-	}
-}
-
-// Home -------------------------------------------- //
-
-.homeContent {
-	margin: 20em auto 0;
-	max-width: 1200px;
+// Home Projects -------------------------------- //
+.projects {
+	float: left;
+	margin-top: 14em;
 	width: 100%;
 
-	.project {
-		background: $lightGrey;
-		font-size: 0.8em;
-		padding: 10em 2em 1em;
+	a {
+		border-bottom: 2px solid rgba(255,255,255,0.25);
+		clear: left;
+		float: left;
+		font-family: $titleHeadingFontFamily;
+		font-size: 2.25em;
+		line-height: 0.7;
+		margin: 0.25em 0 0.5em;
+		position: relative;
 
-		.icon-arrow-right {
-			padding-left: 0.5em;
+		@media screen and (max-width: 700px) {
+			font-size: 1.5em;
+		}
+
+		&:after {
+			content: '\e90f';
+			font-family: 'icomoon';
+			font-size: 0.5em;
+			position: absolute;
+			top: 0.4em;
+			right: -1.75em;
 		}
 	}
 }
 
-// Page -------------------------------------------- //
-
-.pageIntro {
-	background: $altBackgroundColor;
-	margin-left: -450px;
-	max-width: 900px;
-	padding: 2em;
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-}
-
-.intro {
-	font-size: 1.1em;
-	text-align: center;
-}
-
+// Page -------------------------------- //
 .pageContent {
 	background: $altBackgroundColor;
 	padding: 2em 0;
@@ -143,5 +140,32 @@ header {
 
 	.container {
 		max-width: 900px;
+	}
+
+	.zoom-overlay-open & {
+		position: static;
+	}
+}
+
+.projectIntro {
+	background: $altBackgroundColor;
+	padding: 0 1em;
+
+	@media screen and (min-width: 1076px){
+		margin-left: -450px;
+		max-width: 900px;
+		padding: 2em;
+		position: absolute;
+		top: -9.35em;
+		left: 50%;
+	}
+
+	@media only screen and (max-device-height: 1400px) and (orientation: portrait) {
+		margin-left: -45%;
+    	max-width: 90%;
+		padding: 2em;
+		position: absolute;
+		top: -9.35em;
+		left: 50%;
 	}
 }
