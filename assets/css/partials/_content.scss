@@ -1,21 +1,40 @@
 /* ---------------------- Content ---------------------- */
+// General -------------------------------- //
 body {
 	background: $backgroundColor;
 }
 
-.wrapper {
+.container {
+	max-width: 900px;
 	margin: 0 auto;
-	max-width: 95%;
-	width: 1500px;	
+}
+
+.wideContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.pageContent {
+	padding: 2em 1.5em;
+
+	&.altBg {
+		background: $altBackgroundColor;
+	}
+
+	.zoom-overlay-open & {
+		position: static;
+	}
 }
 
 a.button {
-	border: 1px solid;
-	color: $black;
-	font-size: 0.8em;
-	padding: 0.75em 1.5em;
+	background: $shoppyBg;
+	border-radius: 50px;
+	color: $white;
+	font-size: 0.9em;
+	font-weight: 600;
+	font-family: $headingFontFamily;
+	padding: 1em 2em;
 	text-decoration: none;
-	text-transform: uppercase;
 	-ms-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	transition: all 0.2s ease;
@@ -25,8 +44,109 @@ a.button {
 	}
 }
 
+.box {
+	border-radius: 8px;
+	box-shadow: 1px 1px 11px rgba($darkPurple, 0.1);
+	float: left;
+	margin: 0.5em;
+	padding: 0.5em 2em;
+}
+
+.tag {
+	background: lighten($lavender, 11%);
+    border-radius: 3px;
+    color: $darkPurple;
+    display: inline-block;
+    font-size: 0.9em;
+    margin: 0.2em 0.3em 0.2em 0;
+    padding: 0.2em 0.75em;
+}
+
+// Page Title -------------------------------- //
+.title {
+	color: $titleColor;
+	width: 100%;
+
+	h1 {
+		position: relative;			
+	}
+}
+
+// Project -------------------------------- //
+.intro {
+	margin: 0 3em;
+	padding: 4em 0;
+	text-align: center;
+
+	@media screen and (max-width: $breakpoint-small){
+		margin: 0 1em;
+	}
+
+	h1, h4, a, p {
+		color: $titleColor;
+		margin: 0;
+		text-decoration: none;
+	}
+
+	h4 {
+		margin: 0 0 2em;
+		opacity: 0.7;
+	}
+
+	p {
+		font-size: 1.2em;
+		margin: 0 auto;
+		max-width: 750px;
+	}
+}
+
+.project {
+	@media only screen and (min-width: $breakpoint-med){
+		.description {
+			float: left;
+			margin-right: 3%;
+			width: 72%;
+		}
+
+		.tools {
+			float: left;
+			width: 25%;
+		}
+	}
+}
+
+// Persona -------------------------------- //
+.persona {
+	font-size: 0.85em;
+	margin: 0 0 1em;
+
+	@media only screen and (min-width: $breakpoint-med){
+		width: 48.5%;
+
+		&:nth-of-type(2n) {
+			margin-left: 3%;
+		}
+	}
+
+	ul {
+		border-left: none;
+		list-style-type: disc;
+	}
+
+	img {
+		margin-top: 2em;
+	}
+
+	.about {
+		font-size: 1.1em;
+		border-top: 1px solid $borderColor;
+		margin-top: 1.5em;
+		padding-top: 1em;
+	}
+}
+
 // Shoppy -------------------------------- //
-body.shoppy {
+.shoppy .intro {
 	background: $shoppyBg;
 	position: relative;
 
@@ -35,11 +155,11 @@ body.shoppy {
 		background-image: url('../images/bg-shoppy.png');
 		display: block;
 		opacity: 0.4;
-		position: fixed;
-		top: 5%;
-	    left: 5%;
-	    height: 90%;
-	    width: 90%;
+		position: absolute;
+		top: 0;
+	    left: 0;
+	    height: 100%;
+	    width: 100%;
 	}
 
 	.pageContent a.button {
@@ -51,121 +171,28 @@ body.shoppy {
 	}
 }
 
-// Spacing -------------------------------- //
-// .outerBox {
-// 	border: 1px solid rgba(255,255,255,0.4);
-// 	height: calc(100vh - 6em);
-// 	margin: 3em;
-// 	padding: 1em;
-// 	position: fixed;
-// 	top: 0;
-// 	left: 0;
-// 	width: calc(100vw - 6em);
-// 	z-index: 0;
-// }
-
-.outerWrapper {
-	height: calc(100vh - 2em);
-	margin: 2em 3em 0;
-	padding: 0;
-	position: relative;
-	width: calc(100vw - 6em);
-	z-index: 1;
-
-	@media screen and (max-width: 700px) {
-		margin: 2em 1.5em 0;
-		width: calc(100vw - 3em);
-	}
-}
-
+// Footer -------------------------------- //
 .cornerStar {
 	cursor: pointer;
 	font-size: 1em;
 	position: fixed;
-	bottom: 1em;
-	right: 1.25em;
+	bottom: 2.5em;
+    right: 3em;
 
 	i {
-		color: $white;
+		color: $black;
 		opacity: 0.5;
+
+		.home & {
+			color: $white;
+		}
 
 		&:hover {
 			opacity: 1;
 		}
 	}
-}
 
-// Home Projects -------------------------------- //
-.projects {
-	float: left;
-	margin-top: 14em;
-	width: 100%;
-
-	a {
-		border-bottom: 2px solid rgba(255,255,255,0.25);
-		clear: left;
-		float: left;
-		font-family: $titleHeadingFontFamily;
-		font-size: 2.25em;
-		line-height: 0.7;
-		margin: 0.25em 0 0.5em;
-		position: relative;
-
-		@media screen and (max-width: 700px) {
-			font-size: 1.5em;
-		}
-
-		&:after {
-			content: '\e90f';
-			font-family: 'icomoon';
-			font-size: 0.5em;
-			position: absolute;
-			top: 0.4em;
-			right: -1.75em;
-		}
-	}
-}
-
-// Page -------------------------------- //
-.pageContent {
-	background: $altBackgroundColor;
-	padding: 2em 0;
-	position: relative;
-	width: 100%;
-	z-index: 3;
-
-	&.altBg {
-		background: $altAltBackgroundColor;
-	}
-
-	.container {
-		max-width: 900px;
-	}
-
-	.zoom-overlay-open & {
-		position: static;
-	}
-}
-
-.projectIntro {
-	background: $altBackgroundColor;
-	padding: 0 1em;
-
-	@media screen and (min-width: 1076px){
-		margin-left: -450px;
-		max-width: 900px;
-		padding: 2em;
-		position: absolute;
-		top: -9.35em;
-		left: 50%;
-	}
-
-	@media only screen and (max-device-height: 1400px) and (orientation: portrait) {
-		margin-left: -45%;
-    	max-width: 90%;
-		padding: 2em;
-		position: absolute;
-		top: -9.35em;
-		left: 50%;
+	@media screen and (max-width: 1200px) {
+		display: none;
 	}
 }

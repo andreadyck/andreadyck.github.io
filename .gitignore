@@ -6,3 +6,4 @@
 *.DS_Store
 compass_app_log.txt
 .sass-cache/ 
+*.map
