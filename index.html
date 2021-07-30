@@ -5,19 +5,11 @@
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Andrea Dyck</title>
-	<meta name="description" content="Andrea Dyck - Product and Web Designer">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Nunito:400,400i,800" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/screen.min.css">
-
+	<meta name="description" content="UX/UI Designer in Vancouver, BC. Solving problems with design">
+	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="apple-icon.png"/>
-	
-	<!--[if lt IE 9]>
-		<script src="assets/js/html5shiv-printshiv.js"></script>
-		<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&family=DM+Serif+Text&display=swap" rel="stylesheet">
 
 	<!-- Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48567483-1"></script>
@@ -28,31 +20,38 @@
 
 	  gtag('config', 'UA-48567483-1');
 	</script>
-
 </head>
 <body class="home">
-	<header class="clear">
-		<div class="contactInfo">
-			<a href="https://www.linkedin.com/in/andreadyck/">LinkedIn</a>
-			<a href="mailto:hello@andreadyck.com">Mail</a>
-		</div>
-
-		<div class="title">
-			<h1 data-bg-text="designer">Andrea Dyck</h1>
-			<h4>UX / UI Designer</h4>
-		</div>
+	<header>
+        <div class="section--wide">
+            <div class="home__intro">
+				<h1 data-bg-text="designer">Andrea Dyck</h1>
+				<p>👋 Oh hello! I’m Andrea, a UX/UI Designer always looking for my next cup of tea and a puzzle to solve &#8212; physical or otherwise.</p>
+				<ul>
+                    <li><a href="https://www.linkedin.com/in/andreadyck/" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:hello@andreadyck.com">Mail</a></li>
+                </ul>
+			</div>
+        </div>
 	</header>
 
-	<div class="homeContent clear">
-		<div class="projectList left clear">
-			<h4>Projects</h4>
-			<a href="/shoppy">Shopping App Concept</a>
-		</div>	
-	</div>	
+    <main>
+		<div class="section--wide">
+			<div class="home__projects">
+				<h2 class="sr-only">Projects</h2>
+				<article class="home__project project--shoppy">
+					<a class="home__project__image" href="/shoppy">
+						<img src="/assets/images/shoppy-home.png" alt="Grocery list app">
+					</a>
+					<div class="home__project__details">
+						<h3><a href="/shoppy">Grocery Shopping App</a></h3>
+						<p>Concept Project</p>
+					</div>
+				</article>
+			</div>
+		</div>
+    </main>
 
-	<div data-balloon="Oh hi!" data-balloon-pos="up" class="cornerStar"><i class="icon-star"></i></div>
-	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="assets/js/scripts.js" type="text/javascript"></script>
 </body>
 </html>
