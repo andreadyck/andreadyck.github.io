@@ -449,22 +449,38 @@ header {
     position: relative;
 }
 
-.home__writing h2 span {
-    background: #fff;
-    padding-right: 50px;
-    position: relative;
-    z-index: 1;
+    .home__writing h2 span {
+        background: #fff;
+        padding-right: 50px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .home__writing h2::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 1px;
+        background:  var(--border-color-light);
+        z-index: 0;
+    }
+
+.home__writing a .icon-external,
+.home__writing .icon-company {
+    width: 18px;
+    height: 18px;
 }
 
-.home__writing h2::after {
-    content: "";
-    width: 100%;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    height: 1px;
-    background:  var(--border-color-dark);
-    z-index: 0;
+.home__writing article p:nth-of-type(1) {
+    margin-bottom: 7px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.home__writing article p:nth-of-type(2) {
+    max-width: 1000px;
 }
 
 /* ---------------------- Project---------------------- */
@@ -602,7 +618,7 @@ header {
     }
 
     .home__project__image {
-        min-height: 475px;
+        min-height: 425px;
     }
 }
 
