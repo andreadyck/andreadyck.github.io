@@ -370,7 +370,7 @@ header {
     font-family: var(--alt-font-family);
     font-weight: normal;
     font-size: 64px;
-    margin: 60px 0 20px;
+    margin: 50px 0 20px;
     position: relative;
 }
 
@@ -395,7 +395,7 @@ header {
     }
 
 .home__projects {
-    margin: 80px auto 40px;
+    margin-top: 45px;
 }
 
     .home__project { 
