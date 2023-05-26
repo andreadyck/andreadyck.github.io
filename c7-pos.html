@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Andrea Dyck | Commerce7 Point of Sale Redesign</title>
+	<meta name="description" content="Redesigning the point of sale system for Commerce7.">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;600&family=DM+Serif+Text&display=swap" rel="stylesheet">
+
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48567483-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-48567483-1');
+	</script>
+</head>
+<body class="project project--pos" id="page-top">
+	<header>
+		<div class="section--wide">
+			<div class="header__title">
+				<a href="/">Andrea Dyck</a>
+				<p>Product Designer</p>
+			</div>
+			<a href="/">Back to home</a>
+		</div>
+	</header>
+		
+    <main>
+        <div class="section">
+			<h1>Commerce7 Point of Sale Redesign</h1>
+			<p class="subtext">Commerce7 offers direct-to-consumer tools made specifically for wineries. Their software provides ecommerce, point of sale, wine club, and reservation tools that all put a high focus on providing the end-customer with the best experience possible.</p>
+
+            <p>In a busy tasting room, wineries need to complete transactions as quickly as possible. With our current point of sale, we knew that there was room for improvement in regards to the speed and steps required to complete a transaction. Additionally, we wanted to increase cohesiveness with the rest of our software and rebuild the point of sale to use our new components.</p>            
+
+			<div class="columns columns--2 project__summary">
+				<div class="column">
+					<p class="project__summary__title">Company</p>
+					<ul>
+						<li>Commerce7 (Completed during employment)</li>
+					</ul>
+
+					<p class="project__summary__title">Timeline</p>
+					<ul>
+						<li>2.5 months from planning to launch (Dec 2021 - Feb 2022)</li>
+					</ul>
+
+					<p class="project__summary__title">Tools</p>
+					<ul>
+						<li>Sketch</li>
+					</ul>
+				</div>
+				<div class="column">
+					<p class="project__summary__title">Role</p>
+					<ul>
+						<li>&nbsp;&nbsp;•&nbsp;&nbsp;Led the redesign, working with the head of product/development to plan the new features incorporated.</li>
+						<li>&nbsp;&nbsp;•&nbsp;&nbsp;Worked with the backend and frontend developer to hand off the designs and provide assistance with QA until launch.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+        <div class="section">
+			<hr />
+			<h2>Homepage</h2>
+			<p>The goals for the main point of sale screen was to make information easily scannable, allowing users to quickly read and find the key actions needed to start and proceed with an order.</p>
+		</div>
+
+        <div class="section--wide section--wide--image">
+			<img src="assets/images/c7-pos-pos.png" alt="Point of sale homepage before and after">
+		</div>
+
+		<div class="section">
+			<ol>
+				<li><b>Products</b> - The current products felt unorganized and a little lost on the page. They were updated to a card style, making them more similar in appearance to buttons and allowing the user to see the exact amount of clickable space. As a bonus, it also allowed for the reduction of space between products, fitting more into the viewable area.</li>
+				<li><b>Search</b> - The sales associate could already search for any product, but that wasn't evident since it was presented under the product categories. It was moved up in position to better convey its functionality.</li>
+				<li><b>Background</b> - Colours were swapped so that the brighter colour, white, would be used for the primary area of focus; the current order being created.</li>
+				<li><b>Actions</b> - Previously, actions appeared in the middle of the order, but as they affected the entire right panel, they were moved to the top. The two more common actions however, for applying a coupon or creating a new club membership, were moved directly to the screen.</li>
+				<li><b>Order Summary</b> - Products in the cart were given images to visually tie them to the products on the left and the quantity was moved to help it stand out since it had previously gotten lost for products with longer names and SKUs.</li>
+			</ol>
+
+			<p>In addition to the homepage itself, all actions and modals within were given a review to increase button sizes, consistency, and reduce steps wherever possible.</p>	
+		</div>
+
+		<div class="section--wide section--wide--image">
+			<img src="assets/images/c7-pos-home-modals.png" alt="Actions from the home screen before and after">
+		</div>
+
+		<div class="section">
+			<h2>Payment</h2>
+			<p>With the current interface, there was a lot going on, and a lot that the user could do. They could take almost any action that they could from the home page. I wanted to ensure that the focus was kept on the current task; taking payment. Detailed information and extra actions that could be taken from the main screen were hidden and vertical space was drastically reduced from the order summary to ensure that staff could review as much of the order at one time.</p>
+		</div>
+
+		<div class="section--wide section--wide--image">
+			<img src="assets/images/c7-pos-payment.png" alt="Paying for an order before and after">
+		</div>
+
+		<div class="section">
+			<ol>
+				<li><b>Encapsulated Payment</b> - Other orders at the top were hidden and replaced with a single action to go back.</li>
+				<li><b>Amount Due</b> - The total amount was made larger and the previous "balance" was now also reflected in the total if part of the order has been paid for.</li>
+				<li><b>Payment Types</b> - Buttons were increased in size and any types not available for guest orders were disabled so that buttons wouldn't shift positions for staff between orders.</li>
+				<li><b>Split Payment</b> - Instead of first having to select a payment type to choose how much should be charged, a new "Split" option was added directly to the main screen (more on this next).</li>
+				<li><b>Orders Summary</b> - Actions and customer messages already displayed on the homepage were removed to keep the focus on payment and reviewing the order details. Space was reduced to allow the sales associate to review the entire order without having to scroll.</li>
+			</ol>
+
+			<h3>Partial payments</h3>
+			<p>When the sales associate selected a payment type, there was always a field for "Amount Tendered". If the customer wanted to complete the order with multiple forms of payment, this is when they would enter the partial amount to be taken. Although needed in some scenarios, a very low percentage of orders were being placed with multiple forms of payment and displaying the field every time caused an extra step in the transaction process.</p>
+		</div>
+
+		<div class="section--wide section--wide--image">
+			<img src="assets/images/c7-pos-payment-split-old.png" alt="Splitting payment before">
+		</div>
+
+		<div class="section">
+			<p>Instead of displaying the field to adjust the payment for each and every payment type, a new "Split" button was introduced. This would allow the sales associate to edit the amount if necessary, otherwise they could proceed with payment directly and skip that step entirely.</p>
+		</div>
+
+		<div class="section--wide section--wide--image">
+			<img src="assets/images/c7-pos-payment-split-new.png" alt="Splitting payment after">
+		</div>
+
+		<div class="section">
+			<h3>Payment types</h3>
+			<p>Various forms of payment were reviewed and updated for consistency in terminology and any unnecessary information was removed.</p>
+		</div>
+
+		<div class="section--wide section--wide--image">
+			<img src="assets/images/c7-pos-payment-types.png" alt="Payment types before and after">
+		</div>
+
+		<div class="section">
+			<hr />
+			<h2>Order Complete</h2>
+			<p>When the transaction is complete, the receipt & order confirmation window opens. In the current version, there was one window if the order belonged to an existing customer, but if it didn't have a customer attached (guest order), the sales associate would be prompted with two modals, one after the other.</p>
+		</div>
+
+		<div class="section--wide section--wide--image">
+			<img src="assets/images/c7-pos-receipt.png" alt="Receipt and order confirmation before and after">
+		</div>
+
+		<div class="section">
+			<p>Both screens were combined into one and the user would now see a different version based on if a customer was attached to the order or not. If no customer was attached, additional data could easily be captured from the same screen. Buttons were also increased in size and given icons for easier recognition.</p>
+		</div>
+		
+    </main>
+
+	<a class="button--toTop" href="#page-top"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" width="16" height="16" viewBox="0 0 16 16"><g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(1 1)"><line x1="7" x2="7" y1="14"/><polyline points="0 7 7 0 14 7"/></g><span class="sr-only">Go to top of page</span></svg>
+	</a>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
