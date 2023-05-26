@@ -554,17 +554,20 @@ header {
 
     .project__summary ul {
         margin: 0;
-        padding: 0;
+        padding-left: 20px;
     }
 
         .project__summary ul li {
-            list-style-type: none;
             padding-left: 0;
         }
 
     .project__summary ol {
         margin: 0;
         padding-left: 25px;
+    }
+
+    .project__summary li::marker, .project__summary ol::marker {
+        color: var(--text-color);
     }
 
 .project__footer {
